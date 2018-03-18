@@ -7,6 +7,7 @@
 ### Description:
 
 * **v1** : Initial Routes and building blocks of YelpCamp Application
+* **v2** : Data Persistence with application of MongoDB using Mongoose.JS
 
 ### NOTE:
 
