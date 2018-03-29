@@ -1,0 +1,16 @@
+<% include partials/header %>
+        <p>
+            Name : <%= camp.name %>
+        </p>
+        <img class="thumbnail" src="<%= camp.image %>">
+        <p>
+            Description: <%= camp.description %>
+        </p>
+        <div>
+            <h3>Comments follow down:-</h3>
+            <% camp.comments.forEach(function(data) { %>
+                <p><strong><%= data.author %></strong></p>
+                <p><%= data.text %></p>
+            <% }) %>
+        </div>
+<% include partials/footer %>
