@@ -16,21 +16,21 @@
 * **[PassportJS](www.passportjs.org/)** is used to provide user authentication to the application.
 	* **passport-local**
 	* **passport-local-mongoose**
-* Using **[Module.exports]** the app.js file was refactored into multiple sub-files.
+* Using **Module.Exports** the app.js file was refactored into multiple sub-files.
 * Some other self-defined middlewares to improve the application such as:
-	*to prevent unauthorised access to POST routes.
-	*to check whether a user has logged in or not.
+	* to prevent unauthorised access to POST routes.
+	* to check whether a user has logged in or not.
 
 ## Development Stages:
 
 Following `versions` correspond to the different stages in the development of the YelpCamp application.
 
-* `**v1**` : Initial Routes and building blocks of YelpCamp application.
-* `**v2**` : Data Persistence with application of MongoDB using MongooseJS.
-* `**v3**` : app.js file refactored with application of **module.exports**.
-* `**v4**` : Data Persistence and Associativity for Comments.
-* `**v5**` : Campground show page styled using Bootstrap3 and custom CSS.
-* `**v6**` : Added User authentication with application of PassportJS.
+* `**v1**`  Initial Routes and building blocks of YelpCamp application.
+* `**v2**`  Data Persistence with application of MongoDB using MongooseJS.
+* `**v3**`  app.js file refactored with application of **module.exports**.
+* `**v4**`  Data Persistence and Associativity for Comments.
+* `**v5**`  Campground show page styled using Bootstrap3 and custom CSS.
+* `**v6**`  Added User authentication with application of PassportJS.
 
 ### NOTE:
 
