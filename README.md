@@ -2,11 +2,11 @@
 
 **YelpCamp** is a web application built using NodeJS, ExpressJS, Embedded JavaScript (EJS) with a few more frameworks and middle-wares used as the application is developed. It is made while pursuing [The Web Developer Bootcamp](https://www.udemy.com/the-web-developer-bootcamp/) course on [Udemy](https://www.udemy.com/). This 40+ hour course covers HTML, CSS, Javascript, Node, Express, MongoDB, Git, and a bunch of other smaller topics along the way.
 
-### Course Instructor: [Colt Steele](https://www.linkedin.com/in/coltsteele/)
+## Course Instructor: [Colt Steele](https://www.linkedin.com/in/coltsteele/)
 
-### Description:
+## Description:
 
-## Frameworks & Middlewares:
+### Frameworks & Middlewares:
 
 * **[ExpressJS](https://expressjs.com/)** is used for Server Side Routing applications.
 * **[MongooseJS](http://mongoosejs.com/)** is used for Back-End Database operations with MongoDB NoSQL Database.
@@ -21,7 +21,7 @@
 	* to prevent unauthorised access to POST routes.
 	* to check whether a user has logged in or not.
 
-## Development Stages:
+### Development Stages:
 
 Following `versions` correspond to the different stages in the development of the YelpCamp application.
 
