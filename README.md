@@ -4,9 +4,9 @@
 
 ## Course Instructor: [Colt Steele](https://www.linkedin.com/in/coltsteele/)
 
-## Description:
+## Description
 
-### Frameworks & Middlewares:
+### Frameworks & Middlewares
 
 * **[ExpressJS](https://expressjs.com/)** is used for Server Side Routing applications.
 * **[MongooseJS](http://mongoosejs.com/)** is used for Back-End Database operations with MongoDB NoSQL Database.
@@ -21,16 +21,17 @@
 	* to prevent unauthorised access to POST routes.
 	* to check whether a user has logged in or not.
 
-### Development Stages:
+### Development Stages
 
 Following `versions` correspond to the different stages in the development of the YelpCamp application.
 
 * `v1`  Initial Routes and building blocks of YelpCamp application.
-* `v2`  Data Persistence with application of MongoDB using MongooseJS.
+* `v2`  Data Persistence with application of MongooseJS using MongoDB. 
 * `v3`  app.js file refactored with application of **module.exports**.
 * `v4`  Data Persistence and Associativity for Comments.
 * `v5`  Campground show page styled using Bootstrap3 and custom CSS.
 * `v6`  Added User authentication with application of PassportJS.
+* `v7`  Refactored app.js where, Route definitions are now shifted to separate directory **routes**, thereby improving readability.
 
 ### NOTE:
 
