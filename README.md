@@ -25,12 +25,12 @@
 
 Following `versions` correspond to the different stages in the development of the YelpCamp application.
 
-* `**v1**`  Initial Routes and building blocks of YelpCamp application.
-* `**v2**`  Data Persistence with application of MongoDB using MongooseJS.
-* `**v3**`  app.js file refactored with application of **module.exports**.
-* `**v4**`  Data Persistence and Associativity for Comments.
-* `**v5**`  Campground show page styled using Bootstrap3 and custom CSS.
-* `**v6**`  Added User authentication with application of PassportJS.
+* `v1`  Initial Routes and building blocks of YelpCamp application.
+* `v2`  Data Persistence with application of MongoDB using MongooseJS.
+* `v3`  app.js file refactored with application of **module.exports**.
+* `v4`  Data Persistence and Associativity for Comments.
+* `v5`  Campground show page styled using Bootstrap3 and custom CSS.
+* `v6`  Added User authentication with application of PassportJS.
 
 ### NOTE:
 
