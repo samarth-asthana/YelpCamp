@@ -1,6 +1,6 @@
 # YelpCamp
 
-**YelpCamp** is a web application built using NodeJS, ExpressJS, Embedded JavaScript (EJS) with a few more frameworks and middle-wares used as the application is developed. It is made while pursuing [The Web Developer Bootcamp](https://www.udemy.com/the-web-developer-bootcamp/) course on [Udemy](https://www.udemy.com/). This 40+ hour course covers HTML, CSS, Javascript, Node, Express, MongoDB, Git, and a bunch of other smaller topics along the way.
+**YelpCamp** is a web application built using NodeJS, ExpressJS, REpresentational State Transfer (REST), Embedded JavaScript (EJS) with a few more frameworks and middle-wares used as the application is developed. It is made while pursuing [The Web Developer Bootcamp](https://www.udemy.com/the-web-developer-bootcamp/) course on [Udemy](https://www.udemy.com/). This 40+ hour course covers HTML, CSS, Javascript, Node, Express, MongoDB, Git, and a bunch of other smaller topics along the way.
 
 ## Course Instructor: [Colt Steele](https://www.linkedin.com/in/coltsteele/)
 
@@ -31,7 +31,8 @@ Following `versions` correspond to the different stages in the development of th
 * `v4`  Data Persistence and Associativity for Comments.
 * `v5`  Campground show page styled using Bootstrap3 and custom CSS.
 * `v6`  Added User authentication with application of PassportJS.
-* `v7`  Refactored app.js where, Route definitions are now shifted to separate directory **routes**, thereby improving readability.
+* `v7`  Refactored app.js where, Route definitions are now shifted to separate directory: **routes**, thereby improving readability.
+* 'v8'  Database associativity improved between **Users + Comments**, updated form page for adding a new comment.
 
 ### NOTE:
 
