@@ -28,12 +28,14 @@ Following `versions` correspond to the different stages in the development of th
 * `v1`  Initial Routes and building blocks of YelpCamp application.
 * `v2`  Data Persistence with application of MongooseJS using MongoDB. 
 * `v3`  app.js file refactored with application of **module.exports**.
-* `v4`  Data Persistence and Associativity for Comments.
+* `v4`  Data Persistence and user associativity for Comments.
 * `v5`  Campground show page styled using Bootstrap3 and custom CSS.
 * `v6`  Added User authentication with application of PassportJS.
 * `v7`  Refactored app.js where, Route definitions are now shifted to separate directory: **routes**, thereby improving readability.
-* `v8`  Database associativity improved between **Users + Comments**, updated form page for adding a new comment.
+* `v8`  Database associativity updated between **Users + Comments**, updated form page for adding a new comment.
+* `v9`  Database associativity updated between ""Users + Campgrounds**, updated form page for adding a new campground.
 
 ### NOTE:
 
-The application is hosted on [Cloud9 IDE](https://aws.amazon.com/cloud9/), an open-source Cloud Service provided by Amazon Web Services (AWS) for developing web applications.
+* The term **Campground** refers to a blog or an article that someone can add to the YelpCamp application.
+* The application is hosted on [Cloud9 IDE](https://aws.amazon.com/cloud9/), an open-source Cloud Service provided by Amazon Web Services (AWS) for developing web applications.
