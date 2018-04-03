@@ -32,7 +32,7 @@ Following `versions` correspond to the different stages in the development of th
 * `v5`  Campground show page styled using Bootstrap3 and custom CSS.
 * `v6`  Added User authentication with application of PassportJS.
 * `v7`  Refactored app.js where, Route definitions are now shifted to separate directory: **routes**, thereby improving readability.
-* 'v8'  Database associativity improved between **Users + Comments**, updated form page for adding a new comment.
+* `v8`  Database associativity improved between **Users + Comments**, updated form page for adding a new comment.
 
 ### NOTE:
 
