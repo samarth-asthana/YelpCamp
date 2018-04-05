@@ -1,6 +1,6 @@
 # YelpCamp
 
-**YelpCamp** is a web application built using NodeJS, ExpressJS, REpresentational State Transfer (REST), Embedded JavaScript (EJS) with a few more frameworks and middle-wares used as the application is developed. It is made while pursuing [The Web Developer Bootcamp](https://www.udemy.com/the-web-developer-bootcamp/) course on [Udemy](https://www.udemy.com/). This 40+ hour course covers HTML, CSS, Javascript, Node, Express, MongoDB, Git, and a bunch of other smaller topics along the way.
+**YelpCamp** is a web application built using NodeJS, ExpressJS, RESTFUL Routes, Embedded JavaScript (EJS) with a few more frameworks and middle-wares used as the application is developed. It is made while pursuing [The Web Developer Bootcamp](https://www.udemy.com/the-web-developer-bootcamp/) course on [Udemy](https://www.udemy.com/). This 40+ hour course covers HTML, CSS, Javascript, Node, Express, MongoDB, Git, and a bunch of other smaller topics along the way.
 
 ## Course Instructor: [Colt Steele](https://www.linkedin.com/in/coltsteele/)
 
@@ -34,6 +34,12 @@ Following `versions` correspond to the different stages in the development of th
 * `v7`  Refactored app.js where, Route definitions are now shifted to separate directory: **routes**, thereby improving readability.
 * `v8`  Database associativity updated between **Users + Comments**, updated form page for adding a new comment.
 * `v9`  Database associativity updated between **Users + Campgrounds**, updated form page for adding a new campground.
+* `v10` Pre-final version of the app.
+		* Added Edit and Delete buttons for the Campgrounds.
+		* Added Edit and Delete buttons for the Comments.
+		* Added **Authorization** to Campgrounds such that only the owner of the campground should technically update or delete it.
+		* Added **Authorization** to Comments such that only the owner of the comment should technically update or delete it.
+		* Implemented JavaScript **.equals()** method to achieve the above milestones.
 
 ### NOTE:
 
