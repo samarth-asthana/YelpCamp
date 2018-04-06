@@ -40,6 +40,7 @@ Following `versions` correspond to the different stages in the development of th
 	* Added **Authorization** to Campgrounds such that only the owner of the campground should technically update or delete it.
 	* Added **Authorization** to Comments such that only the owner of the comment should technically update or delete it.
 	* Implemented JavaScript **.equals()** method to achieve the above milestones.
+	* Refactored comment and campground route templates for code re-usability.
 
 ### NOTE:
 
