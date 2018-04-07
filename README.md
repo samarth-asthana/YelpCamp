@@ -21,6 +21,31 @@
 	* to prevent unauthorised access to POST routes.
 	* to check whether a user has logged in or not.
 
+### RESTFUL Routes
+
+Application of REpresentational State Transfer (REST)
+
+###### Campground Routes
+
+| Name    | Path                    | HTTP Verb | Purpose                                                 | Mongoose Method                |
+| ------- | ----------------------- | --------- | ------------------------------------------------------- | ------------------------------ |
+| Index   | `/campgrounds`          | GET       | List all campgrounds                                    | Campground.find()              |
+| New     | `/campgrounds/new`      | GET       | Show a form to add a new campground                     | N/A                            |
+| Create  | `/campgrounds`          | POST      | Create a new campground, then redirect somewhere        | Campground.create()            |
+| Show    | `/campgrounds/:id`      | GET       | Show info about one specific campground                 | Campground.findById()          |
+| Edit    | `/campgrounds/:id/edit` | GET       | Show edit form for one campground                       | Campground.findById()          |
+| Update  | `/campgrounds/:id`      | PUT       | Update a particular campground, then redirect somewhere | Campground.findByIdAndUpdate() |
+| Destroy | `/campgrounds/:id`      | DELETE    | Delete a particular campground, then redirect somewhere | Campground.findByIdAndRemove() |
+
+###### Comment Routes
+
+| Name    | Path                                         | HTTP Verb | Purpose                                                 | Mongoose Method             |
+| ------- | -------------------------------------------- | --------- | ------------------------------------------------------- | --------------------------- |
+| New     | `/campgrounds/:id/comments/new`              | GET       | Show a form to add a new comment                        | N/A                         |
+| Create  | `/campgrounds/:id/comments/`                 | POST      | Create a new comment, then redirect somewhere           | Comment.create()            |
+| Update  | `/campgrounds/:id/comments/:comment_id/edit` | PUT       | Update a particular comment, then redirect somewhere    | Comment.findByIdAndUpdate() |
+| Delete  | `/campgrounds/:id/comments/:comment_id/`     | DELETE    | Delete a particular comment, then redirect somewhere    | Comment.findByIdAndRemove() |
+
 ### Development Stages
 
 Following `versions` correspond to the different stages in the development of the YelpCamp application.
@@ -34,13 +59,14 @@ Following `versions` correspond to the different stages in the development of th
 * `v7`  Refactored app.js where, Route definitions are now shifted to separate directory: **routes**, thereby improving readability.
 * `v8`  Database associativity updated between **Users + Comments**, updated form page for adding a new comment.
 * `v9`  Database associativity updated between **Users + Campgrounds**, updated form page for adding a new campground.
-* `v10` Pre-final version of the app.
-	* Added Edit and Delete buttons for the Campgrounds.
-	* Added Edit and Delete buttons for the Comments.
-	* Added **Authorization** to Campgrounds such that only the owner of the campground should technically update or delete it.
-	* Added **Authorization** to Comments such that only the owner of the comment should technically update or delete it.
+* `v10` 
+	* Added Edit and Delete buttons for the Campgrounds and Comments
+	* Added **Authorization** to Campgrounds such that only the owner of the campground should technically update or delete it and applied the same for Comments as well.
 	* Implemented JavaScript **.equals()** method to achieve the above milestones.
 	* Refactored comment and campground route templates for code re-usability.
+* `v11` 
+	* Added flash messages to provide better experience to the user using **connect-flash**.
+	* Optimized the routes to handle a **Bug** that, if a person changes the ID of a campground or comment on the URL and submits such a request, then, in that case the code should first of all check, whether a comment/campground exists with that ID or NOT. This makes our application reliable and safe.
 
 ### NOTE:
 
