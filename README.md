@@ -43,8 +43,9 @@ Application of REpresentational State Transfer (REST)
 | ------- | -------------------------------------------- | --------- | ------------------------------------------------------- | --------------------------- |
 | New     | `/campgrounds/:id/comments/new`              | GET       | Show a form to add a new comment                        | N/A                         |
 | Create  | `/campgrounds/:id/comments/`                 | POST      | Create a new comment, then redirect somewhere           | Comment.create()            |
-| Update  | `/campgrounds/:id/comments/:comment_id/edit` | PUT       | Update a particular comment, then redirect somewhere    | Comment.findByIdAndUpdate() |
-| Delete  | `/campgrounds/:id/comments/:comment_id/`     | DELETE    | Delete a particular comment, then redirect somewhere    | Comment.findByIdAndRemove() |
+| Edit    | `/campgrounds/:id/comments/:comment_id/edit` | GET       | Show edit form for one comment                          | Comment.findById()          |
+| Update  | `/campgrounds/:id/comments/:comment_id`      | PUT       | Update a particular comment, then redirect somewhere    | Comment.findByIdAndUpdate() |
+| Delete  | `/campgrounds/:id/comments/:comment_id`      | DELETE    | Delete a particular comment, then redirect somewhere    | Comment.findByIdAndRemove() |
 
 ### Development Stages
 
