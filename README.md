@@ -25,7 +25,7 @@
 
 Application of REpresentational State Transfer (REST)
 
-###### Campground Routes
+#### Campground Routes
 
 | Name    | Path                    | HTTP Verb | Purpose                                                 | Mongoose Method                |
 | ------- | ----------------------- | --------- | ------------------------------------------------------- | ------------------------------ |
@@ -37,7 +37,7 @@ Application of REpresentational State Transfer (REST)
 | Update  | `/campgrounds/:id`      | PUT       | Update a particular campground, then redirect somewhere | Campground.findByIdAndUpdate() |
 | Destroy | `/campgrounds/:id`      | DELETE    | Delete a particular campground, then redirect somewhere | Campground.findByIdAndRemove() |
 
-###### Comment Routes
+#### Comment Routes
 
 | Name    | Path                                         | HTTP Verb | Purpose                                                 | Mongoose Method             |
 | ------- | -------------------------------------------- | --------- | ------------------------------------------------------- | --------------------------- |
