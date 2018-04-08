@@ -1,0 +1,27 @@
+<% include ../partials/header %>
+        <div class="container">
+            <h1 style="text-align: center;">Edit Campground</h1>
+            <div style="width: 30%; margin: 25px auto;">
+                <form action="/campgrounds/<%= camp._id %>?_method=PUT" method="POST">
+                    <div class="form-group"> <!-- To provide spacing btwn diff. parts of the Form -->
+                        <input class="form-control" type="text" name="campground[name]" value="<%= camp.name %>" required>
+                    </div>
+                    <div class="form-group"> <!-- To provide spacing btwn diff. parts of the Form -->
+                        <input class="form-control" type="number" name="campground[price]" value="<%= camp.price %>" min="0" step="5" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea class="form-control" name="campground[description]" placeholder="Use HTML tags to make your content look nice" rows="10"><%= camp.description %></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input class="form-control" type="text" name="location" id="location" value="<%= camp.location %>">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-primary btn-block">Update</button> <!-- btn-block is used to make button size equal to the size of the input regions specified -->
+                    </div>
+                </form>
+                <a style="text-align: center;" href="/campgrounds">Go Back</a>
+            </div>
+        </div>
+<% include ../partials/footer %>

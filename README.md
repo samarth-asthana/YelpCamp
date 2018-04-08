@@ -68,6 +68,14 @@ Following `versions` correspond to the different stages in the development of th
 * `v11` 
 	* Added flash messages to provide better experience to the user using **connect-flash**.
 	* Optimized the routes to handle a **Bug** that, if a person changes the ID of a campground or comment on the URL and submits such a request, then, in that case the code should first of all check, whether a comment/campground exists with that ID or NOT. This makes our application reliable and safe.
+* `Final`
+	* Added dynamic pricing feature for a Campground.
+	* UI improvements with Navigation bar.
+	* Added **Google Maps location** for a Campground.
+	* Applied **dotenv** to keep the Google API key safe and hidden.
+	* Added **Time created since** using **MomentJS**.
+	* Added **Image upload** for a Campground using [Cloudinary](https://cloudinary.com), a cloud service for hosting images.
+	* Some other minor changes to the UI templates.
 
 ### NOTE:
 
