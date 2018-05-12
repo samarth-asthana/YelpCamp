@@ -1,8 +1,10 @@
 # YelpCamp
 
-**YelpCamp** is a web application built using NodeJS, ExpressJS, RESTFUL Routes, Embedded JavaScript (EJS) with a few more frameworks and middle-wares used as the application is developed. It is made while pursuing [The Web Developer Bootcamp](https://www.udemy.com/the-web-developer-bootcamp/) course on [Udemy](https://www.udemy.com/). This 40+ hour course covers HTML, CSS, Javascript, Node, Express, MongoDB, Git, and a bunch of other smaller topics along the way.
+**YelpCamp** is a web application built using NodeJS, ExpressJS, RESTFUL Routes, Embedded JavaScript (EJS) with a few more frameworks and middle-wares used as the application is developed. This application is a clone of [Yelp](https://www.yelp.com/), a US based, popular social networking site, that focuses on reviewing businesses and sharing information about them.
 
-## Course Instructor: [Colt Steele](https://www.linkedin.com/in/coltsteele/)
+It is made while pursuing [The Web Developer Bootcamp](https://www.udemy.com/the-web-developer-bootcamp/) course on [Udemy](https://www.udemy.com/).
+
+### Course Instructor: [Colt Steele](https://www.linkedin.com/in/coltsteele/)
 
 ## Description
 
@@ -10,16 +12,20 @@
 
 * **[ExpressJS](https://expressjs.com/)** is used for Server Side Routing applications.
 * **[MongooseJS](http://mongoosejs.com/)** is used for Back-End Database operations with MongoDB NoSQL Database.
-* **[Body-Parser](https://github.com/expressjs/body-parser/)** is used to Parse the data that was received as a result of HTTP POST request.
+* **[Body-Parser](https://github.com/expressjs/body-parser/)** is used to parse the data that was received as a result of HTTP POST request.
 * **[Express.Static()](https://expressjs.com/en/starter/static-files.html)** is used to serve the Static files CSS, JS, etc. in the directory as specified.
 * **[Embedded JavaScript]()** is used to embed the JavaScript within the HTML tags to implement the logic.
 * **[PassportJS](www.passportjs.org/)** is used to provide user authentication to the application.
-	* **passport-local**
-	* **passport-local-mongoose**
-* Using **Module.Exports** the app.js file was refactored into multiple sub-files.
+* **Sanitizer** to sanitize the values of the HTML input that arrives as a result of POST request.
+* Used **module.exports** to refactor the app.js file into multiple sub-files.
 * Some other self-defined middlewares to improve the application such as:
 	* to prevent unauthorised access to POST routes.
 	* to check whether a user has logged in or not.
+* Added **Google Maps location** for a Campground.
+* Applied **dotenv** to keep the Google API key safe and hidden.
+* Added **Time created since** using **MomentJS**.
+* Added **Image upload** for a Campground using [Cloudinary](https://cloudinary.com), a cloud service for hosting images.
+* Used **nodemailer** to have a Reset Password feature if a User forgets his/her password.
 
 ### RESTFUL Routes
 
@@ -47,37 +53,6 @@ Application of REpresentational State Transfer (REST)
 | Update  | `/campgrounds/:id/comments/:comment_id`      | PUT       | Update a particular comment, then redirect somewhere    | Comment.findByIdAndUpdate() |
 | Delete  | `/campgrounds/:id/comments/:comment_id`      | DELETE    | Delete a particular comment, then redirect somewhere    | Comment.findByIdAndRemove() |
 
-### Development Stages
-
-Following `versions` correspond to the different stages in the development of the YelpCamp application.
-
-* `v1`  Initial Routes and building blocks of YelpCamp application.
-* `v2`  Data Persistence with application of MongooseJS using MongoDB. 
-* `v3`  app.js file refactored with application of **module.exports**.
-* `v4`  Data Persistence and user associativity for Comments.
-* `v5`  Campground show page styled using Bootstrap3 and custom CSS.
-* `v6`  Added User authentication with application of PassportJS.
-* `v7`  Refactored app.js where, Route definitions are now shifted to separate directory: **routes**, thereby improving readability.
-* `v8`  Database associativity updated between **Users + Comments**, updated form page for adding a new comment.
-* `v9`  Database associativity updated between **Users + Campgrounds**, updated form page for adding a new campground.
-* `v10` 
-	* Added Edit and Delete buttons for the Campgrounds and Comments
-	* Added **Authorization** to Campgrounds such that only the owner of the campground should technically update or delete it and applied the same for Comments as well.
-	* Implemented JavaScript **.equals()** method to achieve the above milestones.
-	* Refactored comment and campground route templates for code re-usability.
-* `v11` 
-	* Added flash messages to provide better experience to the user using **connect-flash**.
-	* Optimized the routes to handle a **Bug** that, if a person changes the ID of a campground or comment on the URL and submits such a request, then, in that case the code should first of all check, whether a comment/campground exists with that ID or NOT. This makes our application reliable and safe.
-* `Final`
-	* Added dynamic pricing feature for a Campground.
-	* UI improvements with Navigation bar.
-	* Added **Google Maps location** for a Campground.
-	* Applied **dotenv** to keep the Google API key safe and hidden.
-	* Added **Time created since** using **MomentJS**.
-	* Added **Image upload** for a Campground using [Cloudinary](https://cloudinary.com), a cloud service for hosting images.
-	* Some other minor changes to the UI templates.
-
 ### NOTE:
 
-* The term **Campground** refers to a blog or an article that someone can add to the YelpCamp application.
-* The application is hosted on [Cloud9 IDE](https://aws.amazon.com/cloud9/), an open-source Cloud Service provided by Amazon Web Services (AWS) for developing web applications.
+The application is hosted on [Cloud9 IDE](https://aws.amazon.com/cloud9/), an open-source Cloud Service provided by Amazon Web Services (AWS) for developing web applications.
