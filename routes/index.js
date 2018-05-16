@@ -51,13 +51,16 @@ router.get("/login", function(req,res) {
     res.render("login", { page: "login" }); // Tell nav-bar that login page is currently active
 });
 // login logic - add middleware authentication
-router.post("/login", passport.authenticate("local", { // Login auth using passport-local-mongoose
-        successFlash: true,
-        successRedirect: "/campgrounds",
+router.post("/login",
+    passport.authenticate("local", { // Login auth using passport-local-mongoose
+        // successRedirect: "/campgrounds",
         failureRedirect: "/login",
         failureFlash: true // Provide flash message to the user for an incorrect login
     }), 
-    function(req,res) {}
+    function(req,res) {
+        var redirect = req.session.redirectTo ? req.session.redirectTo : '/campgrounds';
+        res.redirect(redirect);
+    }
 );
 
 // ---- LOGOUT ROUTE -----
@@ -65,7 +68,7 @@ router.post("/login", passport.authenticate("local", { // Login auth using passp
 router.get("/logout", function(req,res) {
     req.logout(); // Delete all user data in the current session
     req.flash("success", "Logged you out!");
-    res.redirect("/campgrounds");
+    res.redirect("/login");
 });
 
 // ----- UPDATE : FINAL VERSION ----------
