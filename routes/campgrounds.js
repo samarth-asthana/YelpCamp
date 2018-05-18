@@ -155,7 +155,7 @@ router.get("/:id", function(req,res) {
 });
 
 // EDIT - Edit a particular campground
-router.get("/:id/edit", middleware.checkCampgroundOwnership, function(req,res) {
+router.get("/:id/edit", middleware.isLoggedIn, middleware.checkCampgroundOwnership, function(req,res) {
     // ------- UPDATE v10 --------
     Campground.findById(req.params.id, function(err, foundCampground) {
         res.render("campgrounds/edit", { camp: foundCampground });
@@ -163,7 +163,7 @@ router.get("/:id/edit", middleware.checkCampgroundOwnership, function(req,res) {
 });
 
 // UPDATE CAMPGROUND ROUTE
-router.put("/:id", middleware.checkCampgroundOwnership, upload.single("image"), function(req, res){
+router.put("/:id", middleware.isLoggedIn, middleware.checkCampgroundOwnership, upload.single("image"), function(req, res){
     geocoder.geocode(req.body.location, function(err, data) {
         if (err || !data.length) {
           req.flash('error', 'Invalid address');
@@ -202,7 +202,7 @@ router.put("/:id", middleware.checkCampgroundOwnership, upload.single("image"), 
 });
 
 // DELETE - Delete a particular campground
-router.delete("/:id", middleware.checkCampgroundOwnership, function(req,res) {
+router.delete("/:id", middleware.isLoggedIn, middleware.checkCampgroundOwnership, function(req,res) {
     Campground.findById(req.params.id, function(err, foundCampground) {
         
         foundCampground.comments.forEach(function(comment) {  // foundCampground.comments is an array of unique ID's specifying each comment associated with that campground
