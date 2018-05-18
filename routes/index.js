@@ -37,10 +37,8 @@ router.post("/register", function(req, res){
             console.log(err);
             return res.render("register", {error: err.message});
         }
-        passport.authenticate("local")(req, res, function(){
-          req.flash("success", "Successfully Signed Up! Nice to meet you " + req.body.username);
-          res.redirect("/campgrounds"); 
-        });
+        req.flash("success", "You are successfully registered, please log in");
+        res.redirect("/login");
     });
 });
 
@@ -50,18 +48,19 @@ router.post("/register", function(req, res){
 router.get("/login", function(req,res) {
     res.render("login", { page: "login" }); // Tell nav-bar that login page is currently active
 });
-// login logic - add middleware authentication
-router.post("/login",
-    passport.authenticate("local", { // Login auth using passport-local-mongoose
-        // successRedirect: "/campgrounds",
-        failureRedirect: "/login",
-        failureFlash: true // Provide flash message to the user for an incorrect login
-    }), 
-    function(req,res) {
-        var redirect = req.session.redirectTo ? req.session.redirectTo : '/campgrounds';
-        res.redirect(redirect);
-    }
-);
+router.post('/login', function(req, res, next) {
+  passport.authenticate('local', function(err, user, info) {
+    if (err) { return next(err); }
+    if (!user) { return res.redirect('/login'); }
+    req.logIn(user, function(err) {
+      if (err) { return next(err); }
+      var redirectTo = req.session.redirectTo ? req.session.redirectTo : '/campgrounds';
+      delete req.session.redirectTo;
+      req.flash("success","You are now logged in!");
+      res.redirect(redirectTo);
+    });
+  })(req, res, next);
+});
 
 // ---- LOGOUT ROUTE -----
 
