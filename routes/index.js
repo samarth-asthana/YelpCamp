@@ -51,12 +51,15 @@ router.get("/login", function(req,res) {
 router.post('/login', function(req, res, next) {
   passport.authenticate('local', function(err, user, info) {
     if (err) { return next(err); }
-    if (!user) { return res.redirect('/login'); }
+    if (!user) {
+        req.flash("error", info.message); // Give the user a flash message for an incorrect login
+        return res.redirect('/login');
+    }
     req.logIn(user, function(err) {
       if (err) { return next(err); }
       var redirectTo = req.session.redirectTo ? req.session.redirectTo : '/campgrounds';
       delete req.session.redirectTo;
-      req.flash("success","You are now logged in!");
+      req.flash("success", "You are now logged in");
       res.redirect(redirectTo);
     });
   })(req, res, next);
@@ -66,7 +69,7 @@ router.post('/login', function(req, res, next) {
 
 router.get("/logout", function(req,res) {
     req.logout(); // Delete all user data in the current session
-    req.flash("success", "Logged you out!");
+    req.flash("success", "Successfully logged out");
     res.redirect("/login");
 });
 
