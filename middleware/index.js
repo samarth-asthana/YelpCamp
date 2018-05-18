@@ -50,17 +50,17 @@ middlewareObj.checkCommentOwnership = function(req, res, next) {
             }
         });
     } else {
-        req.flash("success", "You need to be logged in to that");
+        req.flash("error", "You need to be logged in to that");
         res.redirect("/login"); // Take the User back to where they came from
     }
 }
 
-middlewareObj.isLoggedIn = function(req, res, next) {
-    if(req.isAuthenticated()) {
+middlewareObj.isLoggedIn = function(req, res, next){
+    if(req.isAuthenticated()){
         return next();
     }
     req.session.redirectTo = req.originalUrl;
-    req.flash("error", "You need to be logged in to do that!");
+    req.flash("error", "You need to be logged in to do that");
     res.redirect("/login");
 }
 
