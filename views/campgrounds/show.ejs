@@ -74,7 +74,17 @@
                 <% campground.comments.forEach(function(comment) { %>
                     <div class="row">
                         <div class="col-md-12">
-                            <strong><%= comment.author.username %></strong>
+                            <strong>
+                                <% if (currentUser && currentUser._id.equals(comment.author.id)) { %>
+                                    <!--If the current user owns the comment, change the color of the user icon-->
+                                    <span style="color: orange;" class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                <% } else { %>
+                                    <!--Else just display it black-->
+                                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                <% } %>
+                                <!--Print out the author username-->
+                                <%= comment.author.username %>
+                            </strong>
                             <span class="pull-right"><%= moment(comment.createdAt).fromNow() %></span>
                             <p><%= comment.text %></p>
                             <% if(currentUser && comment.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin) { %>
