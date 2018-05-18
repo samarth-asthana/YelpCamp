@@ -25,8 +25,8 @@ It is made while pursuing [The Web Developer Bootcamp](https://www.udemy.com/the
 * Applied **dotenv** to keep the Google API key safe and hidden.
 * Added **Time created since** using **MomentJS**.
 * Added **Image upload** for a Campground using [Cloudinary](https://cloudinary.com), a cloud service for hosting images.
-* Used **nodemailer** to have a Reset Password feature if a User forgets his/her password.
-* Used **req.originalUrl** to redirect back to the previous URL after successful authentication.
+* Used **nodemailer** to have a Reset Password functionality if a User forgets his/her password.
+* Used **req.originalUrl** and saved it to **req.session.redirectTo** to redirect back to the previous URL after successful authentication.
 
 ### RESTFUL Routes
 
