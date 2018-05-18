@@ -12,7 +12,8 @@ router.get("/new", middleware.isLoggedIn, function(req,res) { // isLoggedIn func
             req.flash("error", err.message);
             res.redirect("/campgrounds/"+foundCampground._id);
         } else {
-            res.render("comments/new", { campground: foundCampground });
+            req.flash("success", "You are now logged in, please add your comment.");
+            res.redirect("/campgrounds/"+foundCampground._id);
         }
     });
 });
