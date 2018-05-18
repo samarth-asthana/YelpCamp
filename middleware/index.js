@@ -29,7 +29,7 @@ middlewareObj.checkCampgroundOwnership = function(req, res, next) {
             }
         });
     } else {
-        req.flash("error", "You need to be logged in to do that!");
+        req.flash("error", "You need to be logged in to do that");
         res.redirect("/login");
     }
 }
@@ -59,7 +59,7 @@ middlewareObj.isLoggedIn = function(req, res, next){
     if(req.isAuthenticated()){
         return next();
     }
-    req.session.redirectTo = req.originalUrl;
+    req.session.redirectTo = req.originalUrl; // Store the previous URL to the session
     req.flash("error", "You need to be logged in to do that");
     res.redirect("/login");
 }
