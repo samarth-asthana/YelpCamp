@@ -158,7 +158,7 @@ router.get("/:id", function(req,res) {
 router.get("/:id/edit", middleware.isLoggedIn, middleware.checkCampgroundOwnership, function(req,res) {
     // ------- UPDATE v10 --------
     Campground.findById(req.params.id, function(err, foundCampground) {
-        res.render("campgrounds/edit", { camp: foundCampground });
+        res.render("campgrounds/edit", { campground: foundCampground });
     });
 });
 
